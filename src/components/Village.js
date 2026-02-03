@@ -3,7 +3,7 @@ import Cat from './Cat';
 import Header from './Header';
 import Popup from './Popup';
 import houses from '../data/houses';
-import { getWaypoints } from '../data/paths';
+import { getWaypoints, getRoadPosition } from '../data/paths';
 import useBreakpoint from '../hooks/useBreakpoint';
 import './Village.css';
 
@@ -43,11 +43,11 @@ function getCoverRect(viewW, viewH, imgRatio) {
 
 function Village() {
   const breakpoint = useBreakpoint();
-  const startPos = houses[0][breakpoint] || houses[0].tablet;
+  const initialRoadPos = getRoadPosition('terraria', breakpoint);
 
   const [catPos, setCatPos] = useState({
-    x: startPos.x + startPos.width / 2,
-    y: startPos.y + startPos.height / 2,
+    x: initialRoadPos.x,
+    y: initialRoadPos.y,
   });
   const [catDirection, setCatDirection] = useState('down');
   const [isWalking, setIsWalking] = useState(false);
@@ -161,18 +161,11 @@ function Village() {
     };
   }, []);
 
-  // When breakpoint changes, reposition cat to current house location
+  // When breakpoint changes, reposition cat to road position near current house
   useEffect(() => {
-    if (currentHouse) {
-      const house = houses.find((h) => h.id === currentHouse);
-      if (house) {
-        const pos = house[breakpoint] || house.tablet;
-        setCatPos({ x: pos.x + pos.width / 2, y: pos.y + pos.height / 2 });
-      }
-    } else {
-      const pos = houses[0][breakpoint] || houses[0].tablet;
-      setCatPos({ x: pos.x + pos.width / 2, y: pos.y + pos.height / 2 });
-    }
+    const houseId = currentHouse || 'terraria';
+    const roadPos = getRoadPosition(houseId, breakpoint);
+    setCatPos({ x: roadPos.x, y: roadPos.y });
   }, [breakpoint, currentHouse]);
 
   const bgImage = BG_IMAGES[breakpoint] || BG_IMAGES.tablet;

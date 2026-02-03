@@ -84,7 +84,7 @@ const houses = [
     id: "portal",
     name: "Portal",
     image: "house7.png",
-    mobile: { x: 43, y: 57, width: 32, height: 14 },
+    mobile: { x: 43, y: 63, width: 32, height: 14 },
     tablet: { x: 43, y: 57, width: 32, height: 14 },
     desktop: { x: 50, y: 59, width: 18, height: 28 },
     popupContent: {

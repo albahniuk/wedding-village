@@ -3,79 +3,333 @@
 
 const segmentsByBreakpoint = {
   mobile: {
+    // Row 1: terraria, mario, gravity-falls (top row)
     "terraria->mario": [
-      { x: 24, y: 15 },
-      { x: 30, y: 14 },
-      { x: 36, y: 12 },
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 28 },
     ],
-    "mario->gravity-falls": [
-      { x: 50, y: 12 },
-      { x: 58, y: 13 },
-      { x: 66, y: 12 },
+    "terraria->gravity-falls": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 28 },
+      { x: 40, y: 27 },
+      { x: 50, y: 26 },
+      { x: 58, y: 27 },
     ],
     "terraria->unravel": [
-      { x: 14, y: 16 },
-      { x: 13, y: 19 },
-      { x: 14, y: 22 },
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
     ],
+    "terraria->it-takes-two": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 40 },
+    ],
+    "terraria->borderlands": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "terraria->portal": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    "mario->gravity-falls": [
+      { x: 50, y: 26 },
+      { x: 58, y: 27 },
+    ],
+    "mario->unravel": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+    ],
+    "mario->it-takes-two": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 40 },
+    ],
+    "mario->borderlands": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "mario->portal": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    "gravity-falls->unravel": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+    ],
+    "gravity-falls->it-takes-two": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 40 },
+    ],
+    "gravity-falls->borderlands": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "gravity-falls->portal": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    // Row 2: unravel, it-takes-two (middle row)
     "unravel->it-takes-two": [
-      { x: 32, y: 26 },
-      { x: 40, y: 24 },
-      { x: 50, y: 23 },
+      { x: 30, y: 45 },
+      { x: 35, y: 42 },
+      { x: 42, y: 40 },
+      { x: 50, y: 42 },
     ],
     "unravel->borderlands": [
-      { x: 16, y: 30 },
-      { x: 14, y: 33 },
-      { x: 12, y: 37 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "unravel->portal": [
+      { x: 30, y: 45 },
+      { x: 35, y: 42 },
+      { x: 42, y: 40 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    "it-takes-two->borderlands": [
+      { x: 50, y: 40 },
+      { x: 42, y: 40 },
+      { x: 35, y: 42 },
+      { x: 30, y: 45 },
+      { x: 25, y: 48 },
+      { x: 22, y: 52 },
     ],
     "it-takes-two->portal": [
-      { x: 58, y: 28 },
-      { x: 56, y: 31 },
-      { x: 54, y: 35 },
+      { x: 50, y: 40 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
     ],
+    // Row 3: borderlands, portal (bottom row)
     "borderlands->portal": [
-      { x: 22, y: 44 },
-      { x: 30, y: 43 },
-      { x: 38, y: 42 },
-      { x: 46, y: 40 },
+      { x: 25, y: 58 },
+      { x: 32, y: 56 },
+      { x: 40, y: 55 },
     ],
   },
   tablet: {
+    // Same as mobile (using mobile background)
     "terraria->mario": [
-      { x: 24, y: 15 },
-      { x: 30, y: 14 },
-      { x: 36, y: 12 },
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 28 },
     ],
-    "mario->gravity-falls": [
-      { x: 50, y: 12 },
-      { x: 58, y: 13 },
-      { x: 66, y: 12 },
+    "terraria->gravity-falls": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 28 },
+      { x: 40, y: 27 },
+      { x: 50, y: 26 },
+      { x: 58, y: 27 },
     ],
     "terraria->unravel": [
-      { x: 14, y: 16 },
-      { x: 13, y: 19 },
-      { x: 14, y: 22 },
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+    ],
+    "terraria->it-takes-two": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 40 },
+    ],
+    "terraria->borderlands": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "terraria->portal": [
+      { x: 22, y: 27 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    "mario->gravity-falls": [
+      { x: 50, y: 26 },
+      { x: 58, y: 27 },
+    ],
+    "mario->unravel": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 28, y: 29 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+    ],
+    "mario->it-takes-two": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 40 },
+    ],
+    "mario->borderlands": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "mario->portal": [
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    "gravity-falls->unravel": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 28 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+    ],
+    "gravity-falls->it-takes-two": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 40 },
+    ],
+    "gravity-falls->borderlands": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 32 },
+      { x: 30, y: 36 },
+      { x: 25, y: 40 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "gravity-falls->portal": [
+      { x: 58, y: 27 },
+      { x: 50, y: 26 },
+      { x: 40, y: 27 },
+      { x: 33, y: 32 },
+      { x: 38, y: 35 },
+      { x: 44, y: 38 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
     ],
     "unravel->it-takes-two": [
-      { x: 32, y: 26 },
-      { x: 40, y: 24 },
-      { x: 50, y: 23 },
+      { x: 30, y: 45 },
+      { x: 35, y: 42 },
+      { x: 42, y: 40 },
+      { x: 50, y: 42 },
     ],
     "unravel->borderlands": [
-      { x: 16, y: 30 },
-      { x: 14, y: 33 },
-      { x: 12, y: 37 },
+      { x: 22, y: 46 },
+      { x: 20, y: 52 },
+    ],
+    "unravel->portal": [
+      { x: 30, y: 45 },
+      { x: 35, y: 42 },
+      { x: 42, y: 40 },
+      { x: 50, y: 42 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
+    ],
+    "it-takes-two->borderlands": [
+      { x: 50, y: 40 },
+      { x: 42, y: 40 },
+      { x: 35, y: 42 },
+      { x: 30, y: 45 },
+      { x: 25, y: 48 },
+      { x: 22, y: 52 },
     ],
     "it-takes-two->portal": [
-      { x: 58, y: 28 },
-      { x: 56, y: 31 },
-      { x: 54, y: 35 },
+      { x: 50, y: 40 },
+      { x: 52, y: 48 },
+      { x: 50, y: 54 },
     ],
     "borderlands->portal": [
-      { x: 22, y: 44 },
-      { x: 30, y: 43 },
-      { x: 38, y: 42 },
-      { x: 46, y: 40 },
+      { x: 25, y: 58 },
+      { x: 32, y: 56 },
+      { x: 40, y: 55 },
     ],
   },
   desktop: {
@@ -294,14 +548,13 @@ const segmentsByBreakpoint = {
     "gravity-falls->unravel": [
       { x: 63, y: 26 },
       { x: 63, y: 29 },
-      { x: 59, y: 31 },
-      { x: 51, y: 41 },
-      { x: 52, y: 48 },
-      { x: 52, y: 53 },
-      { x: 51, y: 55 },
-      { x: 44, y: 66 },
+      { x: 58, y: 32 },
+      { x: 50, y: 42 },
+      { x: 51, y: 46 },
+      { x: 51, y: 53 },
       { x: 44, y: 64 },
       { x: 39, y: 64 },
+      { x: 34, y: 60 },
     ],
     "gravity-falls->it-takes-two": [
       { x: 63, y: 29 },
@@ -345,12 +598,10 @@ const segmentsByBreakpoint = {
       { x: 34, y: 60 },
       { x: 39, y: 64 },
       { x: 44, y: 64 },
-      { x: 44, y: 66 },
-      { x: 51, y: 55 },
-      { x: 52, y: 53 },
-      { x: 52, y: 48 },
-      { x: 51, y: 41 },
-      { x: 59, y: 31 },
+      { x: 51, y: 53 },
+      { x: 51, y: 46 },
+      { x: 50, y: 42 },
+      { x: 58, y: 32 },
       { x: 63, y: 29 },
       { x: 70, y: 35 },
       { x: 71, y: 36 },
@@ -365,12 +616,10 @@ const segmentsByBreakpoint = {
       { x: 34, y: 60 },
       { x: 39, y: 64 },
       { x: 44, y: 64 },
-      { x: 44, y: 66 },
-      { x: 51, y: 55 },
-      { x: 52, y: 53 },
-      { x: 52, y: 48 },
-      { x: 51, y: 41 },
-      { x: 59, y: 31 },
+      { x: 51, y: 53 },
+      { x: 51, y: 46 },
+      { x: 50, y: 42 },
+      { x: 58, y: 32 },
       { x: 63, y: 29 },
       { x: 70, y: 35 },
       { x: 71, y: 36 },
@@ -388,12 +637,10 @@ const segmentsByBreakpoint = {
       { x: 34, y: 60 },
       { x: 39, y: 64 },
       { x: 44, y: 64 },
-      { x: 44, y: 66 },
-      { x: 51, y: 55 },
-      { x: 52, y: 53 },
-      { x: 52, y: 48 },
-      { x: 51, y: 41 },
-      { x: 59, y: 31 },
+      { x: 51, y: 53 },
+      { x: 51, y: 46 },
+      { x: 50, y: 42 },
+      { x: 58, y: 32 },
       { x: 63, y: 29 },
       { x: 70, y: 35 },
       { x: 71, y: 36 },
@@ -407,16 +654,12 @@ const segmentsByBreakpoint = {
       { x: 53, y: 70 },
     ],
     "it-takes-two->borderlands": [
-      { x: 64, y: 62 },
-      { x: 60, y: 62 },
       { x: 57, y: 57 },
       { x: 53, y: 62 },
       { x: 53, y: 70 },
       { x: 44, y: 82 },
     ],
     "it-takes-two->portal": [
-      { x: 64, y: 62 },
-      { x: 60, y: 62 },
       { x: 57, y: 57 },
       { x: 53, y: 62 },
       { x: 53, y: 70 },
@@ -474,36 +717,63 @@ function findPath(fromId, toId) {
 }
 
 // Get all waypoints for traveling between houses at a given breakpoint
-export function getWaypoints(fromId, toId, houses, breakpoint) {
+// The cat starts and ends at the first/last waypoint of the path (on the road),
+// not at the house center, so it doesn't overlap the houses.
+export function getWaypoints(fromId, toId, _houses, breakpoint) {
   if (fromId === toId) return [];
 
   const allSegments =
     allSegmentsByBreakpoint[breakpoint] || allSegmentsByBreakpoint.tablet;
 
-  const houseLookup = {};
-  houses.forEach((h) => {
-    const pos = h[breakpoint] || h.tablet;
-    houseLookup[h.id] = { x: pos.x + pos.width / 2, y: pos.y + pos.height / 2 };
-  });
-
-  // Check for direct path first (used when all 21 combinations are defined, like desktop)
+  // Check for direct path first (used when all 21 combinations are defined)
   const directKey = `${fromId}->${toId}`;
   if (allSegments[directKey]) {
-    return [houseLookup[fromId], ...allSegments[directKey], houseLookup[toId]];
+    // Return just the waypoints - first point is start, last point is end
+    return [...allSegments[directKey]];
   }
 
-  // Fallback to BFS for breakpoints with only adjacent segments (mobile/tablet)
+  // Fallback to BFS for breakpoints with only adjacent segments
   const houseRoute = findPath(fromId, toId);
   if (houseRoute.length < 2) return [];
 
-  const waypoints = [houseLookup[houseRoute[0]]];
+  const waypoints = [];
   for (let i = 0; i < houseRoute.length - 1; i++) {
     const segKey = `${houseRoute[i]}->${houseRoute[i + 1]}`;
     const seg = allSegments[segKey];
     if (seg) waypoints.push(...seg);
-    waypoints.push(houseLookup[houseRoute[i + 1]]);
   }
   return waypoints;
+}
+
+// Get the road position near a house (first waypoint of any path starting from that house,
+// or last waypoint of any path ending at that house)
+// This is where the cat should be positioned when "at" a house
+export function getRoadPosition(houseId, breakpoint) {
+  const segments =
+    segmentsByBreakpoint[breakpoint] || segmentsByBreakpoint.tablet;
+
+  // First, try to find a path that starts from this house
+  for (const key of Object.keys(segments)) {
+    if (key.startsWith(`${houseId}->`)) {
+      const waypoints = segments[key];
+      if (waypoints && waypoints.length > 0) {
+        return waypoints[0]; // First waypoint = road position near this house
+      }
+    }
+  }
+
+  // If no outgoing path found, find a path that ends at this house
+  for (const key of Object.keys(segments)) {
+    if (key.endsWith(`->${houseId}`)) {
+      const waypoints = segments[key];
+      if (waypoints && waypoints.length > 0) {
+        return waypoints[waypoints.length - 1]; // Last waypoint = road position near this house
+      }
+    }
+  }
+
+  // Fallback: return a default position (shouldn't happen if paths are defined)
+  return { x: 50, y: 50 };
 }
 
 export default allSegmentsByBreakpoint;
