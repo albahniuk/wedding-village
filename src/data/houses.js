@@ -7,7 +7,7 @@ const houses = [
     name: "Terraria",
     image: "house1.png",
     mobile: { x: 9, y: 23, width: 25, height: 12 },
-    tablet: { x: 7, y: 2, width: 29, height: 27 },
+    tablet: { x: 9, y: 23, width: 25, height: 12 },
     desktop: { x: 29, y: 5, width: 14, height: 26 },
     popupContent: {
       title: "🏡 Terraria",
@@ -20,7 +20,7 @@ const houses = [
     name: "Mario Bros",
     image: "house2.png",
     mobile: { x: 35, y: 26, width: 24, height: 14 },
-    tablet: { x: 37, y: 6, width: 29, height: 27 },
+    tablet: { x: 35, y: 26, width: 24, height: 14 },
     desktop: { x: 44, y: 8, width: 13, height: 24 },
     popupContent: {
       title: "🍄 Mario Bros",
@@ -33,7 +33,7 @@ const houses = [
     name: "Mystery Shack",
     image: "house3.png",
     mobile: { x: 66, y: 26, width: 25, height: 12 },
-    tablet: { x: 67, y: 4, width: 29, height: 27 },
+    tablet: { x: 66, y: 26, width: 25, height: 12 },
     desktop: { x: 61, y: 5, width: 14, height: 26 },
     popupContent: {
       title: "🔮 Gravity Falls",
@@ -46,7 +46,7 @@ const houses = [
     name: "Unravel Two",
     image: "house4.png",
     mobile: { x: 14, y: 43, width: 28, height: 14 },
-    tablet: { x: 15, y: 37, width: 29, height: 27 },
+    tablet: { x: 14, y: 43, width: 28, height: 14 },
     desktop: { x: 31, y: 37, width: 16, height: 28 },
     popupContent: {
       title: "🧶 Unravel Two",
@@ -59,7 +59,7 @@ const houses = [
     name: "It Takes Two",
     image: "house5.png",
     mobile: { x: 53, y: 42, width: 28, height: 14 },
-    tablet: { x: 58, y: 33, width: 29, height: 27 },
+    tablet: { x: 53, y: 42, width: 28, height: 14 },
     desktop: { x: 55, y: 33, width: 16, height: 28 },
     popupContent: {
       title: "🎮 It Takes Two",
@@ -72,7 +72,7 @@ const houses = [
     name: "Borderlands",
     image: "house6.png",
     mobile: { x: 15, y: 58, width: 25, height: 14 },
-    tablet: { x: 17, y: 67, width: 29, height: 27 },
+    tablet: { x: 15, y: 58, width: 25, height: 14 },
     desktop: { x: 32, y: 65, width: 14, height: 28 },
     popupContent: {
       title: "💥 Borderlands",
@@ -85,7 +85,7 @@ const houses = [
     name: "Portal",
     image: "house7.png",
     mobile: { x: 43, y: 57, width: 32, height: 14 },
-    tablet: { x: 52, y: 60, width: 29, height: 27 },
+    tablet: { x: 43, y: 57, width: 32, height: 14 },
     desktop: { x: 50, y: 59, width: 18, height: 28 },
     popupContent: {
       title: "🌀 Portal",

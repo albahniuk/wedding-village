@@ -11,14 +11,14 @@ const CAT_SPEED = 0.3;
 
 const BG_IMAGES = {
   mobile: 'background-mobile.png',
-  tablet: 'background-tablet.png',
+  tablet: 'background-mobile.png',
   desktop: 'background-desktop.png',
 };
 
 // Native aspect ratios of each background image
 const BG_RATIOS = {
   mobile: 1152 / 2048,   // 9:16
-  tablet: 1024 / 1024,   // 1:1
+  tablet: 1152 / 2048,   // 9:16 (same as mobile)
   desktop: 2048 / 1152,  // 16:9
 };
 
