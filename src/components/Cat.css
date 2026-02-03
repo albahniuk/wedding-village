@@ -1,0 +1,13 @@
+.cat {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 10;
+  /* offset so cat center is at the position point */
+  margin-left: -16px;
+  margin-top: -16px;
+  transition: none;
+}

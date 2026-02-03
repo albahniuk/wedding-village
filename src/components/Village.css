@@ -1,0 +1,40 @@
+.village {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+/* This layer matches the full rendered image area (may overflow viewport).
+   Houses and cat are positioned inside it with %, so they always align
+   to the background image regardless of viewport aspect ratio. */
+.village__layer {
+  position: absolute;
+  /* dimensions and position set via inline style in JS */
+}
+
+.village__house {
+  position: absolute;
+  cursor: pointer;
+}
+
+.village__house-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  user-select: none;
+  pointer-events: none;
+  transition:
+    filter 0.2s,
+    transform 0.2s;
+}
+
+.village__house:hover .village__house-img {
+  filter: brightness(1.15);
+  transform: scale(1.03);
+}

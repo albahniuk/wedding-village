@@ -1,0 +1,124 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 24px;
+  pointer-events: none;
+}
+
+.header__player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: auto;
+}
+
+.header__player-label {
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.header__player--left .header__player-label {
+  color: #ff4081;
+}
+
+.header__player--right .header__player-label {
+  color: #10d275;
+}
+
+.header__player-img {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  user-select: none;
+}
+
+.header__countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+.header__countdown-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header__calendar-img {
+  width: 73px;
+  height: 70px;
+  user-select: none;
+}
+
+.header__date {
+  font-family: "Press Start 2P", monospace;
+  font-size: 18px;
+  color: #ffe600;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.header__timer {
+  font-family: "Press Start 2P", monospace;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 1025px) {
+  .header {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .header__player--left {
+    order: 1;
+  }
+
+  .header__countdown {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .header__player--right {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header__player-label {
+    font-size: 9px;
+  }
+
+  .header__player-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__date {
+    font-size: 10px;
+  }
+
+  .header__timer {
+    font-size: 8px;
+  }
+
+  .header__calendar-img {
+    width: 40px;
+    height: 40px;
+  }
+}
