@@ -10,16 +10,20 @@ const houses = [
     tablet: { x: 9, y: 23, width: 25, height: 12 },
     desktop: { x: 29, y: 5, width: 14, height: 26 },
     popupContent: {
-      title: "🏡 El gran día: 07/11/2026",
-      subtitle: "Los tiempos aproximados para que no te pierdas nada.",
+      title: "🏡 Nuestra historia",
+      subtitle: "De un 'Truco o Trato' al 'Sí, quiero'",
       body: (
         <>
-          14:00 h - Ceremonia Civil
+          El azar nos unió en un canal de Discord, pero fue la música la que nos
+          hizo quedarnos. Entre las canciones de nuestra lista "Truco o Trato" y
+          los paseos por Madrid, fuimos desnudando el alma hasta que la pantalla
+          se nos quedó pequeña.
           <br />
-          14:30 h - Banquete
-          <br />
-          19:00 h - Barra Libre y Fiesta
-          <br />
+          Crecimos entre conciertos, videojuegos, viajes y la complicidad de
+          quien encuentra su refugio en el otro. Cambiamos el rumbo para anclar
+          nuestra vida en Galicia, aprendiendo que el hogar no es un lugar, sino
+          la piel de la persona que entiende tu caos y celebra tus risas. Hoy,
+          nuestra canción favorita es la que bailamos juntos cada mañana.
         </>
       ),
     },
@@ -32,26 +36,16 @@ const houses = [
     tablet: { x: 35, y: 26, width: 24, height: 14 },
     desktop: { x: 44, y: 8, width: 13, height: 24 },
     popupContent: {
-      title: "🍄 ¿Dónde?",
-      subtitle: "La Casa de Tía Julita",
+      title: "🍄 El gran día: 07/11/2026",
+      subtitle: "Los tiempos aproximados para que no te pierdas nada.",
       body: (
         <>
-          Un enclave gallego con vistas increíbles para este día único. <br />
+          14:00 h - Ceremonia civil
           <br />
-          Rúa Rodríguez Castelao, 10
+          14:30 h - Banquete
           <br />
-          15624 Ares, A Coruña
+          19:00 h - Barra libre y fiesta
           <br />
-          España
-          <br />
-          <a
-            href="https://www.google.com/maps/dir//La+casa+de+la+t%C3%ADa+Julita,+R%C3%BAa+Rodr%C3%ADguez+Castelao,+10,+15624+Ares,+A+Coru%C3%B1a/@43.3553408,-8.394697,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd2e76bb9b299203:0xacf544a5357e60ae!2m2!1d-8.2353481!2d43.4313582?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-            className="popup__btn"
-          >
-            Cómo llegar
-          </a>
         </>
       ),
     },
@@ -87,31 +81,26 @@ const houses = [
     tablet: { x: 14, y: 43, width: 28, height: 14 },
     desktop: { x: 31, y: 37, width: 16, height: 28 },
     popupContent: {
-      title: "🧶 ¿Dónde descanso este cuerpazo?",
-      subtitle:
-        "Hemos seleccionado alojamientos cerca de Ares y la preciosa villa medieval de Pontedeume para daros algunas ideas.",
+      title: "🧶 ¿Dónde?",
+      subtitle: "La Casa de Tía Julita",
       body: (
         <>
-          <strong>Ares:</strong>
+          Un enclave gallego con vistas increíbles para este día único. <br />
           <br />
-          - Noaru apartamentos deluxe (a 5 min en coche o 17 min andando de la
-          casa de la tía Julita)
+          Rúa Rodríguez Castelao, 10
           <br />
-          - Apartamentos Ares rentals (a 5 min en coche o 16 min andando de la
-          casa de la tía Julita)
+          15624 Ares, A Coruña
           <br />
-          - Hotel Villa de Ares (a 3 min en coche o 13 min andando de la casa de
-          la tía Julita)
+          España
           <br />
-          <br />
-          <strong>Pontedeume:</strong>
-          <br />
-          - Hotel Montebreamo (a 18 min en coche de la casa de la tía Julita)
-          <br />
-          - Hotel Albatros (a 16 min en coche de la casa de la tía Julita)
-          <br />
-          - Hotel Camino do Eume (a 16 min en coche de la casa de la tía Julita)
-          <br />- Hotel A falúa (a 16 min en coche de la casa de la tía Julita)
+          <a
+            href="https://www.google.com/maps/dir//La+casa+de+la+t%C3%ADa+Julita,+R%C3%BAa+Rodr%C3%ADguez+Castelao,+10,+15624+Ares,+A+Coru%C3%B1a/@43.3553408,-8.394697,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd2e76bb9b299203:0xacf544a5357e60ae!2m2!1d-8.2353481!2d43.4313582?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noreferrer"
+            className="popup__btn"
+          >
+            Cómo llegar
+          </a>
         </>
       ),
     },
@@ -124,7 +113,44 @@ const houses = [
     tablet: { x: 53, y: 42, width: 28, height: 14 },
     desktop: { x: 55, y: 33, width: 16, height: 28 },
     popupContent: {
-      title: "🎮 ¡Aprovecha y alarga tu estancia en Galicia!",
+      title: "🎮 ¿Dónde descanso este cuerpazo?",
+      subtitle:
+        "Hemos seleccionado alojamientos cerca de Ares y la preciosa villa medieval de Pontedeume para daros algunas ideas.",
+      body: (
+        <>
+          <strong>Ares:</strong>
+          <br />
+          - Noaru apartamentos deluxe (a 5 min en coche o 17 min andando de La
+          casa de la tía Julita)
+          <br />
+          - Apartamentos Ares rentals (a 5 min en coche o 16 min andando de La
+          casa de la tía Julita)
+          <br />
+          - Hotel Villa de Ares (a 3 min en coche o 13 min andando de La casa de
+          la tía Julita)
+          <br />
+          <br />
+          <strong>Pontedeume:</strong>
+          <br />
+          - Hotel Montebreamo (a 18 min en coche de La casa de la tía Julita)
+          <br />
+          - Hotel Albatros (a 16 min en coche de La casa de la tía Julita)
+          <br />
+          - Hotel Camino do Eume (a 16 min en coche de La casa de la tía Julita)
+          <br />- Hotel A falúa (a 16 min en coche de La casa de la tía Julita)
+        </>
+      ),
+    },
+  },
+  {
+    id: "borderlands",
+    name: "Borderlands",
+    image: "house6.png",
+    mobile: { x: 15, y: 58, width: 25, height: 14 },
+    tablet: { x: 15, y: 58, width: 25, height: 14 },
+    desktop: { x: 32, y: 65, width: 14, height: 28 },
+    popupContent: {
+      title: "💥 ¡Aprovecha y alarga tu estancia en Galicia!",
       subtitle:
         "Los que venís desde Madrid acordaros de que... ¡El lunes es festivo! Y aunque no sea así, siempre es buena excusa para alargar el fin de semana y descubrir rincones de Galicia.",
       body: (
@@ -168,32 +194,6 @@ const houses = [
     },
   },
   {
-    id: "borderlands",
-    name: "Borderlands",
-    image: "house6.png",
-    mobile: { x: 15, y: 58, width: 25, height: 14 },
-    tablet: { x: 15, y: 58, width: 25, height: 14 },
-    desktop: { x: 32, y: 65, width: 14, height: 28 },
-    popupContent: {
-      title: "💥 Nuestra historia",
-      subtitle: "De un 'Truco o Trato' al 'Sí, quiero'",
-      body: (
-        <>
-          El azar nos unió en un canal de Discord, pero fue la música la que nos
-          hizo quedarnos. Entre las canciones de nuestra lista "Truco o Trato" y
-          los paseos por Madrid, fuimos desnudando el alma hasta que la pantalla
-          se nos quedó pequeña.
-          <br />
-          Crecimos entre conciertos, videojuegos, viajes y la complicidad de
-          quien encuentra su refugio en el otro. Cambiamos el rumbo para anclar
-          nuestra vida en Galicia, aprendiendo que el hogar no es un lugar, sino
-          la piel de la persona que entiende tu caos y celebra tus risas. Hoy,
-          nuestra canción favorita es la que bailamos juntos cada mañana.
-        </>
-      ),
-    },
-  },
-  {
     id: "portal",
     name: "Portal",
     image: "house7.png",
@@ -205,11 +205,11 @@ const houses = [
       subtitle: "¿Vienes a la boda?",
       body: (
         <>
-          Por favor, confírmanos tu asistencia a cualquiera de los dos. También
-          dinos si tienes alguna alergia o restricción alimentaria para que el
-          menú sea perfecto para ti.
+          Por favor, confírmanos tu asistencia a cualquiera de los dos. <br />
+          También dinos si tienes alguna alergia o restricción alimentaria para
+          que el menú sea perfecto para ti.
           <br />
-          ¡Os esperamos!.
+          <strong>¡Os esperamos!</strong>
         </>
       ),
     },
