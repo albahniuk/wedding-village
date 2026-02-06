@@ -63,8 +63,8 @@ const decorations = [
     id: "it-takes-two",
     image: "it-takes-two.png",
     alt: "Cubes from It Takes Two",
-    mobile: { x: 74, y: 46, width: 11, height: 4 },
-    tablet: { x: 74, y: 46, width: 11, height: 4 },
+    mobile: { x: 74, y: 55, width: 11, height: 4 },
+    tablet: { x: 74, y: 55, width: 11, height: 4 },
     desktop: { x: 51, y: 40, width: 9, height: 7 },
   },
 
