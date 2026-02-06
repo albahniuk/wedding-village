@@ -3,6 +3,7 @@ import Cat from './Cat';
 import Header from './Header';
 import Popup from './Popup';
 import houses from '../data/houses';
+import decorations from '../data/decorations';
 import { getWaypoints, getRoadPosition } from '../data/paths';
 import useBreakpoint from '../hooks/useBreakpoint';
 import './Village.css';
@@ -177,6 +178,29 @@ function Village() {
     >
       <Header />
       <div className="village__layer" style={layerStyle}>
+        {decorations.map((deco) => {
+          const pos = deco[breakpoint] || deco.tablet;
+          return (
+            <div
+              key={deco.id}
+              className="village__decoration"
+              style={{
+                left: `${pos.x}%`,
+                top: `${pos.y}%`,
+                width: `${pos.width}%`,
+                height: `${pos.height}%`,
+              }}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/${deco.image}`}
+                alt={deco.alt}
+                className="village__decoration-img"
+                draggable={false}
+              />
+            </div>
+          );
+        })}
+
         {houses.map((house) => {
           const pos = house[breakpoint] || house.tablet;
           return (

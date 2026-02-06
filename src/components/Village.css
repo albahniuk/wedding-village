@@ -17,6 +17,20 @@
   /* dimensions and position set via inline style in JS */
 }
 
+.village__decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.village__decoration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  user-select: none;
+  filter: drop-shadow(2px 2px 4px #333);
+}
+
 .village__house {
   position: absolute;
   cursor: pointer;
