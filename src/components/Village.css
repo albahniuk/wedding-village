@@ -22,6 +22,11 @@
   pointer-events: none;
 }
 
+.village__decoration--clickable {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 .village__decoration-img {
   width: 100%;
   height: 100%;
@@ -75,4 +80,27 @@
 
 .music-toggle:hover {
   background: #8b6914;
+}
+
+.bill-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: bill-flash 0.3s ease-out;
+}
+
+.bill-overlay__img {
+  max-width: 90%;
+  max-height: 90%;
+  image-rendering: auto;
+}
+
+@keyframes bill-flash {
+  0% { opacity: 0; transform: scale(1.3); }
+  100% { opacity: 1; transform: scale(1); }
 }

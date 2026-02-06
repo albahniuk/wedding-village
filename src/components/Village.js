@@ -1,26 +1,26 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
-import Cat from './Cat';
-import Header from './Header';
-import Popup from './Popup';
-import houses from '../data/houses';
-import decorations from '../data/decorations';
-import { getWaypoints, getRoadPosition } from '../data/paths';
-import useBreakpoint from '../hooks/useBreakpoint';
-import './Village.css';
+import { useState, useRef, useCallback, useEffect } from "react";
+import Cat from "./Cat";
+import Header from "./Header";
+import Popup from "./Popup";
+import houses from "../data/houses";
+import decorations from "../data/decorations";
+import { getWaypoints, getRoadPosition } from "../data/paths";
+import useBreakpoint from "../hooks/useBreakpoint";
+import "./Village.css";
 
 const CAT_SPEED = 0.3;
 
 const BG_IMAGES = {
-  mobile: 'background-mobile.png',
-  tablet: 'background-mobile.png',
-  desktop: 'background-desktop.png',
+  mobile: "background-mobile.png",
+  tablet: "background-mobile.png",
+  desktop: "background-desktop.png",
 };
 
 // Native aspect ratios of each background image
 const BG_RATIOS = {
-  mobile: 1152 / 2048,   // 9:16
-  tablet: 1152 / 2048,   // 9:16 (same as mobile)
-  desktop: 2048 / 1152,  // 16:9
+  mobile: 1152 / 2048, // 9:16
+  tablet: 1152 / 2048, // 9:16 (same as mobile)
+  desktop: 2048 / 1152, // 16:9
 };
 
 // Calculate the rendered image area when using background-size: cover
@@ -44,19 +44,20 @@ function getCoverRect(viewW, viewH, imgRatio) {
 
 function Village() {
   const breakpoint = useBreakpoint();
-  const initialRoadPos = getRoadPosition('terraria', breakpoint);
+  const initialRoadPos = getRoadPosition("terraria", breakpoint);
 
   const [catPos, setCatPos] = useState({
     x: initialRoadPos.x,
     y: initialRoadPos.y,
   });
-  const [catDirection, setCatDirection] = useState('down');
+  const [catDirection, setCatDirection] = useState("down");
   const [isWalking, setIsWalking] = useState(false);
   const [spriteFrame, setSpriteFrame] = useState(0);
   const [currentHouse, setCurrentHouse] = useState(null);
   const [popupContent, setPopupContent] = useState(null);
   const [layerStyle, setLayerStyle] = useState({});
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showBill, setShowBill] = useState(false);
   const audioRef = useRef(null);
   const animRef = useRef(null);
   const frameCountRef = useRef(0);
@@ -67,7 +68,7 @@ function Village() {
       const rect = getCoverRect(
         window.innerWidth,
         window.innerHeight,
-        BG_RATIOS[breakpoint] || BG_RATIOS.tablet
+        BG_RATIOS[breakpoint] || BG_RATIOS.tablet,
       );
       setLayerStyle({
         left: `${rect.left}px`,
@@ -77,8 +78,8 @@ function Village() {
       });
     }
     updateLayer();
-    window.addEventListener('resize', updateLayer);
-    return () => window.removeEventListener('resize', updateLayer);
+    window.addEventListener("resize", updateLayer);
+    return () => window.removeEventListener("resize", updateLayer);
   }, [breakpoint]);
 
   const stopWalking = useCallback(() => {
@@ -97,7 +98,7 @@ function Village() {
       setPopupContent(null);
       stopWalking();
 
-      const fromId = currentHouse || 'terraria';
+      const fromId = currentHouse || "terraria";
       const waypoints = getWaypoints(fromId, houseId, houses, breakpoint);
 
       if (waypoints.length < 2) {
@@ -116,7 +117,7 @@ function Village() {
         if (!target) {
           setIsWalking(false);
           setCurrentHouse(houseId);
-          setCatDirection('down');
+          setCatDirection("down");
           setPopupContent(house.popupContent);
           return;
         }
@@ -138,9 +139,9 @@ function Village() {
         const absDy = Math.abs(dy);
         let dir;
         if (absDx > absDy) {
-          dir = dx > 0 ? 'right' : 'left';
+          dir = dx > 0 ? "right" : "left";
         } else {
-          dir = dy > 0 ? 'down' : 'back';
+          dir = dy > 0 ? "down" : "back";
         }
         setCatDirection(dir);
 
@@ -155,7 +156,7 @@ function Village() {
 
       animRef.current = requestAnimationFrame(animate);
     },
-    [currentHouse, stopWalking, breakpoint]
+    [currentHouse, stopWalking, breakpoint],
   );
 
   useEffect(() => {
@@ -166,7 +167,7 @@ function Village() {
 
   // When breakpoint changes, reposition cat to road position near current house
   useEffect(() => {
-    const houseId = currentHouse || 'terraria';
+    const houseId = currentHouse || "terraria";
     const roadPos = getRoadPosition(houseId, breakpoint);
     setCatPos({ x: roadPos.x, y: roadPos.y });
   }, [breakpoint, currentHouse]);
@@ -188,22 +189,26 @@ function Village() {
   return (
     <div
       className="village"
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${bgImage})` }}
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${bgImage})`,
+      }}
     >
       <Header />
       <div className="village__layer" style={layerStyle}>
         {decorations.map((deco) => {
           const pos = deco[breakpoint] || deco.tablet;
+          const isEasterEgg = deco.id === "gravity-falls";
           return (
             <div
               key={deco.id}
-              className="village__decoration"
+              className={`village__decoration${isEasterEgg ? " village__decoration--clickable" : ""}`}
               style={{
                 left: `${pos.x}%`,
                 top: `${pos.y}%`,
                 width: `${pos.width}%`,
                 height: `${pos.height}%`,
               }}
+              onClick={isEasterEgg ? () => setShowBill(true) : undefined}
             >
               <img
                 src={`${process.env.PUBLIC_URL}/assets/${deco.image}`}
@@ -251,9 +256,27 @@ function Village() {
 
       <Popup content={popupContent} onClose={() => setPopupContent(null)} />
 
-      <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/assets/stardew-valley.mp3`} loop />
-      <button className="music-toggle" onClick={toggleMusic} title={isPlaying ? 'Pause music' : 'Play music'}>
-        {isPlaying ? '\u266B' : '\u266A'}
+      {showBill && (
+        <div className="bill-overlay" onClick={() => setShowBill(false)}>
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/bill.gif`}
+            alt="Bill Cipher"
+            className="bill-overlay__img"
+          />
+        </div>
+      )}
+
+      <audio
+        ref={audioRef}
+        src={`${process.env.PUBLIC_URL}/assets/stardew-valley.mp3`}
+        loop
+      />
+      <button
+        className="music-toggle"
+        onClick={toggleMusic}
+        title={isPlaying ? "Pause music" : "Play music"}
+      >
+        {isPlaying ? "\u266B" : "\u266A"}
       </button>
     </div>
   );

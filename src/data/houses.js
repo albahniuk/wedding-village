@@ -155,7 +155,7 @@ const houses = [
     popupContent: {
       title: "💥 ¡Aprovecha y alarga tu estancia en Galicia!",
       subtitle:
-        "Los que venís desde Madrid acordaros de que... ¡El lunes es festivo! Y aunque no sea así, siempre es buena excusa para alargar el fin de semana y descubrir rincones de Galicia.",
+        "Los que venís desde Madrid acordaros de que... ¡el lunes es festivo! Y aunque no sea así, siempre es buena excusa para alargar el fin de semana y descubrir rincones de Galicia.",
       body: (
         <>
           <strong>Rutas y naturaleza:</strong>

@@ -43,9 +43,9 @@ const decorations = [
     id: "gravity-falls",
     image: "gravity-falls.png",
     alt: "Gravity Falls characters",
-    mobile: { x: 77, y: 35, width: 14, height: 6 },
-    tablet: { x: 77, y: 35, width: 14, height: 6 },
-    desktop: { x: 67, y: 23, width: 11, height: 13 },
+    mobile: { x: 77, y: 36, width: 14, height: 6 },
+    tablet: { x: 77, y: 36, width: 14, height: 6 },
+    desktop: { x: 67, y: 25, width: 11, height: 13 },
   },
 
   // --- Unravel house ---
