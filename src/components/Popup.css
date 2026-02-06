@@ -21,14 +21,14 @@
   max-height: 80vh;
   width: 90%;
   position: relative;
-  font-family: 'Press Start 2P', monospace, sans-serif;
+  font-family: "Press Start 2P", monospace, sans-serif;
   image-rendering: pixelated;
   overflow-y: auto;
 }
 
 .popup__close {
   position: sticky;
-  top: 0;
+  top: -24px;
   float: right;
   margin-top: -24px;
   margin-right: -20px;
@@ -74,7 +74,7 @@
   display: inline-block;
   margin-top: 12px;
   padding: 10px 16px;
-  font-family: 'Press Start 2P', monospace;
+  font-family: "Press Start 2P", monospace;
   font-size: 9px;
   color: #fff;
   background: #5c4033;
