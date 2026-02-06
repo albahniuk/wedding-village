@@ -58,6 +58,7 @@ function Village() {
   const [layerStyle, setLayerStyle] = useState({});
   const [isPlaying, setIsPlaying] = useState(false);
   const [showBill, setShowBill] = useState(false);
+  const villageRef = useRef(null);
   const audioRef = useRef(null);
   const animRef = useRef(null);
   const frameCountRef = useRef(0);
@@ -65,9 +66,11 @@ function Village() {
   // Recalculate cover rect on resize or breakpoint change
   useEffect(() => {
     function updateLayer() {
+      const el = villageRef.current;
+      if (!el) return;
       const rect = getCoverRect(
-        window.innerWidth,
-        window.innerHeight,
+        el.clientWidth,
+        el.clientHeight,
         BG_RATIOS[breakpoint] || BG_RATIOS.tablet,
       );
       setLayerStyle({
@@ -188,6 +191,7 @@ function Village() {
 
   return (
     <div
+      ref={villageRef}
       className="village"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${bgImage})`,
