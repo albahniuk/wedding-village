@@ -10,7 +10,7 @@ function Popup({ content, onClose }) {
         <button className="popup__close" onClick={onClose}>✕</button>
         <h2 className="popup__title">{content.title}</h2>
         <h3 className="popup__subtitle">{content.subtitle}</h3>
-        <p className="popup__body">{content.body}</p>
+        <div className="popup__body">{content.body}</div>
       </div>
     </div>
   );

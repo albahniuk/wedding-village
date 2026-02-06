@@ -18,10 +18,12 @@
   border-radius: 4px;
   padding: 32px 28px 24px;
   max-width: 400px;
+  max-height: 80vh;
   width: 90%;
   position: relative;
   font-family: 'Press Start 2P', monospace, sans-serif;
   image-rendering: pixelated;
+  overflow-y: auto;
 }
 
 .popup__close {
@@ -64,4 +66,27 @@
   line-height: 1.8;
   color: #333;
   margin: 0;
+}
+
+.popup__btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: #fff;
+  background: #5c4033;
+  border: 2px solid #3e2a1e;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.popup__btn:hover {
+  background: #8b6914;
+}
+
+.popup__btn + .popup__btn {
+  margin-left: 8px;
 }

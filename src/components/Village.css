@@ -32,9 +32,9 @@
   transition:
     filter 0.2s,
     transform 0.2s;
+  filter: drop-shadow(3px 3px 6px #333);
 }
 
 .village__house:hover .village__house-img {
-  filter: brightness(1.15);
   transform: scale(1.03);
 }
