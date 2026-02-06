@@ -14,16 +14,19 @@ const houses = [
       subtitle: "De un 'Truco o Trato' al 'Sí, quiero'",
       body: (
         <>
-          El azar nos unió en un canal de Discord, pero fue la música la que nos
-          hizo quedarnos. Entre las canciones de nuestra lista "Truco o Trato" y
-          los paseos por Madrid, fuimos desnudando el alma hasta que la pantalla
-          se nos quedó pequeña.
+          ¿Quién nos iba a decir que un grupo de Discord sería el principio de
+          todo? Nuestra historia se escribió primero en una lista de Spotify
+          llamada "Truco o Trato" y después en las calles de Madrid, entre
+          conciertos y risas compartidas.
           <br />
-          Crecimos entre conciertos, videojuegos, viajes y la complicidad de
-          quien encuentra su refugio en el otro. Cambiamos el rumbo para anclar
-          nuestra vida en Galicia, aprendiendo que el hogar no es un lugar, sino
-          la piel de la persona que entiende tu caos y celebra tus risas. Hoy,
-          nuestra canción favorita es la que bailamos juntos cada mañana.
+          Hemos viajado, hemos mudado nuestras vidas a Galicia y hemos aprendido
+          que el "hogar" se construye en las pequeñas cosas y en esas risas
+          mudas que estallan por tonterias. Pero si hubo un momento que lo
+          cambió todo, fue en Islandia. Allí, tras el velo de una cascada y bajo
+          la luz de un sol que apenas nacía, prometimos que nuestra banda sonora
+          no dejaría de sonar nunca. <br />
+          ¡Estamos felices de que ahora forméis parte de nuestra siguiente gran
+          estrofa!
         </>
       ),
     },
