@@ -52,3 +52,27 @@
 .village__house:hover .village__house-img {
   transform: scale(1.03);
 }
+
+.music-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  background: #5c4033;
+  color: #ffe600;
+  border: 3px solid #3e2a1e;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+  image-rendering: pixelated;
+}
+
+.music-toggle:hover {
+  background: #8b6914;
+}

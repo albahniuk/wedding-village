@@ -56,6 +56,8 @@ function Village() {
   const [currentHouse, setCurrentHouse] = useState(null);
   const [popupContent, setPopupContent] = useState(null);
   const [layerStyle, setLayerStyle] = useState({});
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
   const animRef = useRef(null);
   const frameCountRef = useRef(0);
 
@@ -169,6 +171,18 @@ function Village() {
     setCatPos({ x: roadPos.x, y: roadPos.y });
   }, [breakpoint, currentHouse]);
 
+  const toggleMusic = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      audio.play();
+      setIsPlaying(true);
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  }, []);
+
   const bgImage = BG_IMAGES[breakpoint] || BG_IMAGES.tablet;
 
   return (
@@ -236,6 +250,11 @@ function Village() {
       </div>
 
       <Popup content={popupContent} onClose={() => setPopupContent(null)} />
+
+      <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/assets/stardew-valley.mp3`} loop />
+      <button className="music-toggle" onClick={toggleMusic} title={isPlaying ? 'Pause music' : 'Play music'}>
+        {isPlaying ? '\u266B' : '\u266A'}
+      </button>
     </div>
   );
 }
