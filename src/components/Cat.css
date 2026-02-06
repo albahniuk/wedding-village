@@ -11,3 +11,13 @@
   margin-top: -16px;
   transition: none;
 }
+
+@media (max-width: 768px) {
+  .cat {
+    width: 22px;
+    height: 22px;
+    background-size: 66px 88px;
+    margin-left: -11px;
+    margin-top: -11px;
+  }
+}

@@ -28,7 +28,7 @@ function Cat({ x, y, direction, isWalking, frame }) {
     left: `${x}%`,
     top: `${y}%`,
     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/cat-sprite.png)`,
-    backgroundPosition: `-${col * 32}px -${row * 32}px`,
+    backgroundPosition: `${col * 50}% ${(row / 3) * 100}%`,
     transform: facingRight ? "scaleX(-1)" : "none",
     filter: `drop-shadow(2px 0px 3px #333)`,
   };
