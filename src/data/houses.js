@@ -20,11 +20,10 @@ const houses = [
           conciertos y risas compartidas.
           <br />
           Hemos viajado, hemos mudado nuestras vidas a Galicia y hemos aprendido
-          que el "hogar" se construye en las pequeñas cosas y en esas risas
-          mudas que estallan por tonterias. Pero si hubo un momento que lo
-          cambió todo, fue en Islandia. Allí, tras el velo de una cascada y bajo
-          la luz de un sol que apenas nacía, prometimos que nuestra banda sonora
-          no dejaría de sonar nunca. <br />
+          que el "hogar" se construye en las pequeñas grandes cosas. Pero si
+          hubo un momento que lo cambió todo, fue en Islandia. Allí, tras el
+          velo de una cascada y bajo la luz de un sol que apenas nacía,
+          prometimos que nuestra banda sonora no dejaría de sonar nunca. <br />
           ¡Estamos felices de que ahora forméis parte de nuestra siguiente gran
           estrofa!
         </>
@@ -71,7 +70,8 @@ const houses = [
           <br />
           Con sentidiño: Recordad que nos casamos en noviembre y en plena costa
           gallega. Os recomendamos venir preparados por si nos sorprende el frío
-          o la lluvia.
+          o la lluvia. Para que os hagáis una idea, el clima suele ser fresco y
+          húmedo, con temperaturas que suelen oscilar entre los 10°C y 16°C.
         </>
       ),
     },
@@ -85,10 +85,12 @@ const houses = [
     desktop: { x: 31, y: 37, width: 16, height: 28 },
     popupContent: {
       title: "🧶 ¿Dónde?",
-      subtitle: "La Casa de Tía Julita",
+      subtitle: "La Casa de la Tía Julita",
       body: (
         <>
-          Un enclave gallego con vistas increíbles para este día único. <br />
+          Un enclave gallego con vistas increíbles para este día único, en el
+          que esperamos que bebáis como enanos, cantéis como elfos y comáis como
+          hobbits. <br />
           <br />
           Rúa Rodríguez Castelao, 10
           <br />
