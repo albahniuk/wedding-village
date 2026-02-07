@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wedding-village/static/css/main.0e27586f.css",
-    "main.js": "/wedding-village/static/js/main.42210b06.js",
+    "main.js": "/wedding-village/static/js/main.8d2f19f3.js",
     "static/js/453.5450b55f.chunk.js": "/wedding-village/static/js/453.5450b55f.chunk.js",
     "index.html": "/wedding-village/index.html",
     "main.0e27586f.css.map": "/wedding-village/static/css/main.0e27586f.css.map",
-    "main.42210b06.js.map": "/wedding-village/static/js/main.42210b06.js.map",
+    "main.8d2f19f3.js.map": "/wedding-village/static/js/main.8d2f19f3.js.map",
     "453.5450b55f.chunk.js.map": "/wedding-village/static/js/453.5450b55f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e27586f.css",
-    "static/js/main.42210b06.js"
+    "static/js/main.8d2f19f3.js"
   ]
 }
