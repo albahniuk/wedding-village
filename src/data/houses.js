@@ -215,6 +215,18 @@ const houses = [
           que el menú sea perfecto para ti.
           <br />
           <strong>¡Os esperamos!</strong>
+          <br />
+          <br />
+          Y por último pero no menos importante, si quieres hacer alguna
+          sugerencia musical para la fiesta, ¡será más que bienvenida! <br />
+          <a
+            href="https://open.spotify.com/playlist/10JNsziBQjrWOUSxe7yNFy?si=7yLd_6C1THGbzoZW3moIVA&pt=7f4834cc232db0bbb7a988b23ef570c5"
+            target="_blank"
+            rel="noreferrer"
+            className="popup__btn"
+          >
+            Ir a la playlist de Spotify
+          </a>
         </>
       ),
     },
