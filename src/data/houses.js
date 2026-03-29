@@ -220,7 +220,7 @@ const houses = [
           Y por último pero no menos importante, si quieres hacer alguna
           sugerencia musical para la fiesta, ¡será más que bienvenida! <br />
           <a
-            href="https://open.spotify.com/playlist/10JNsziBQjrWOUSxe7yNFy?si=9ec9c5a6091c4d7a&pt=cb4522acc18fe95dd3abec012360ba81"
+            href="https://open.spotify.com/playlist/10JNsziBQjrWOUSxe7yNFy?si=d8491db2984c408e&pt=28ae4a3bfe47ec773b1cb33f4a99ce4b"
             target="_blank"
             rel="noreferrer"
             className="popup__btn"
